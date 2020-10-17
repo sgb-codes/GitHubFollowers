@@ -19,6 +19,7 @@
 		2AD855A9253B918F00EB759B /* GFTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD855A8253B918F00EB759B /* GFTitleLabel.swift */; };
 		2AD855AC253B93A900EB759B /* GFBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD855AB253B93A900EB759B /* GFBodyLabel.swift */; };
 		2AD855AF253B962F00EB759B /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD855AE253B962F00EB759B /* GFAlertVC.swift */; };
+		2AD855B2253B9D6D00EB759B /* GFContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD855B1253B9D6D00EB759B /* GFContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		2AD855A8253B918F00EB759B /* GFTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTitleLabel.swift; sourceTree = "<group>"; };
 		2AD855AB253B93A900EB759B /* GFBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFBodyLabel.swift; sourceTree = "<group>"; };
 		2AD855AE253B962F00EB759B /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
+		2AD855B1253B9D6D00EB759B /* GFContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				2AD855A8253B918F00EB759B /* GFTitleLabel.swift */,
 				2AD855AB253B93A900EB759B /* GFBodyLabel.swift */,
 				2AD855AE253B962F00EB759B /* GFAlertVC.swift */,
+				2AD855B1253B9D6D00EB759B /* GFContainerView.swift */,
 			);
 			path = GitHubFollowers;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				2AD855A6253B83E900EB759B /* FollowerListVC.swift in Sources */,
 				2AD8559C253B556300EB759B /* FavoritesListVC.swift in Sources */,
 				2AD85582253B498600EB759B /* SceneDelegate.swift in Sources */,
+				2AD855B2253B9D6D00EB759B /* GFContainerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
