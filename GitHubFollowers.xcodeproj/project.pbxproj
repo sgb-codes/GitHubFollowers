@@ -21,6 +21,7 @@
 		2AD855AF253B962F00EB759B /* GFAlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD855AE253B962F00EB759B /* GFAlertVC.swift */; };
 		2AD855B2253B9D6D00EB759B /* GFContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD855B1253B9D6D00EB759B /* GFContainerView.swift */; };
 		2AD855B6253B9F2200EB759B /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD855B5253B9F2200EB759B /* UIViewController+Extension.swift */; };
+		2AD855BF253BAAF900EB759B /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD855BE253BAAF900EB759B /* Follower.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		2AD855AE253B962F00EB759B /* GFAlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAlertVC.swift; sourceTree = "<group>"; };
 		2AD855B1253B9D6D00EB759B /* GFContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFContainerView.swift; sourceTree = "<group>"; };
 		2AD855B5253B9F2200EB759B /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		2AD855BE253BAAF900EB759B /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		2AD8557E253B498600EB759B /* GitHubFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				2AD855BD253BAAEA00EB759B /* Model */,
 				2AD855BB253BA76D00EB759B /* Support */,
 				2AD855BA253BA71000EB759B /* Extensions */,
 				2AD855B9253BA6DD00EB759B /* CustomViews */,
@@ -121,6 +124,14 @@
 				2AD8558A253B498A00EB759B /* LaunchScreen.storyboard */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		2AD855BD253BAAEA00EB759B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2AD855BE253BAAF900EB759B /* Follower.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +210,7 @@
 				2AD85580253B498600EB759B /* AppDelegate.swift in Sources */,
 				2AD855AF253B962F00EB759B /* GFAlertVC.swift in Sources */,
 				2AD855AC253B93A900EB759B /* GFBodyLabel.swift in Sources */,
+				2AD855BF253BAAF900EB759B /* Follower.swift in Sources */,
 				2AD855A9253B918F00EB759B /* GFTitleLabel.swift in Sources */,
 				2AD855A6253B83E900EB759B /* FollowerListVC.swift in Sources */,
 				2AD8559C253B556300EB759B /* FavoritesListVC.swift in Sources */,
