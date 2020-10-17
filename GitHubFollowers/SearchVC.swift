@@ -17,9 +17,12 @@ class SearchVC: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .systemBackground
+        
         configureLogoImageView()
         configureUsernameTextField()
         configureCallToActionButton()
+        createDismissKeyboardTapGesture()
+        
     }
     
     
@@ -29,6 +32,11 @@ class SearchVC: UIViewController {
         navigationController?.isNavigationBarHidden = true
     }
 
+    
+    func createDismissKeyboardTapGesture() {
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
+    }
     
     func configureLogoImageView() {
         view.addSubview(logoImageView)
@@ -46,6 +54,8 @@ class SearchVC: UIViewController {
     
     func configureUsernameTextField() {
         view.addSubview(usernameTextField)
+        
+        usernameTextField.delegate = self
         
         NSLayoutConstraint.activate([
             usernameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 48),
@@ -65,5 +75,12 @@ class SearchVC: UIViewController {
             callToActionButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
             callToActionButton.heightAnchor.constraint(equalToConstant: 50),
         ])
+    }
+}
+
+extension SearchVC: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        print("Did Tap Return")
+        return true
     }
 }
