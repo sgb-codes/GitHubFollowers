@@ -22,6 +22,7 @@
 		2AD855B2253B9D6D00EB759B /* GFContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD855B1253B9D6D00EB759B /* GFContainerView.swift */; };
 		2AD855B6253B9F2200EB759B /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD855B5253B9F2200EB759B /* UIViewController+Extension.swift */; };
 		2AD855BF253BAAF900EB759B /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD855BE253BAAF900EB759B /* Follower.swift */; };
+		2AD855C3253BAEA800EB759B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD855C2253BAEA800EB759B /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		2AD855B1253B9D6D00EB759B /* GFContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFContainerView.swift; sourceTree = "<group>"; };
 		2AD855B5253B9F2200EB759B /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		2AD855BE253BAAF900EB759B /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
+		2AD855C2253BAEA800EB759B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				2AD855BE253BAAF900EB759B /* Follower.swift */,
+				2AD855C2253BAEA800EB759B /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				2AD855A0253B662100EB759B /* GFButton.swift in Sources */,
 				2AD85580253B498600EB759B /* AppDelegate.swift in Sources */,
 				2AD855AF253B962F00EB759B /* GFAlertVC.swift in Sources */,
+				2AD855C3253BAEA800EB759B /* User.swift in Sources */,
 				2AD855AC253B93A900EB759B /* GFBodyLabel.swift in Sources */,
 				2AD855BF253BAAF900EB759B /* Follower.swift in Sources */,
 				2AD855A9253B918F00EB759B /* GFTitleLabel.swift in Sources */,
