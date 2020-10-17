@@ -13,6 +13,7 @@
 		2AD8558C253B498A00EB759B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2AD8558A253B498A00EB759B /* LaunchScreen.storyboard */; };
 		2AD85598253B552C00EB759B /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD85597253B552C00EB759B /* SearchVC.swift */; };
 		2AD8559C253B556300EB759B /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8559B253B556300EB759B /* FavoritesListVC.swift */; };
+		2AD855A0253B662100EB759B /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8559F253B662100EB759B /* GFButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2AD8558D253B498A00EB759B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2AD85597253B552C00EB759B /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		2AD8559B253B556300EB759B /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
+		2AD8559F253B662100EB759B /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				2AD8558D253B498A00EB759B /* Info.plist */,
 				2AD85597253B552C00EB759B /* SearchVC.swift */,
 				2AD8559B253B556300EB759B /* FavoritesListVC.swift */,
+				2AD8559F253B662100EB759B /* GFButton.swift */,
 			);
 			path = GitHubFollowers;
 			sourceTree = "<group>";
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AD85598253B552C00EB759B /* SearchVC.swift in Sources */,
+				2AD855A0253B662100EB759B /* GFButton.swift in Sources */,
 				2AD85580253B498600EB759B /* AppDelegate.swift in Sources */,
 				2AD8559C253B556300EB759B /* FavoritesListVC.swift in Sources */,
 				2AD85582253B498600EB759B /* SceneDelegate.swift in Sources */,
