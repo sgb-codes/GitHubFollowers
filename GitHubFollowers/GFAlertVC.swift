@@ -48,8 +48,8 @@ class GFAlertVC: UIViewController {
         NSLayoutConstraint.activate([
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            containerView.widthAnchor.constraint(equalToConstant: 280),
-            containerView.heightAnchor.constraint(equalToConstant: 280)
+            containerView.widthAnchor.constraint(equalToConstant: 300),
+            containerView.heightAnchor.constraint(equalToConstant: 220)
         ])
     }
     
@@ -90,7 +90,7 @@ class GFAlertVC: UIViewController {
             messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
             messageLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: padding),
             messageLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -padding),
-            messageLabel.bottomAnchor.constraint(equalTo: actionButton.topAnchor, constant: 8)
+            messageLabel.bottomAnchor.constraint(equalTo: actionButton.topAnchor, constant: -12)
         ])
     }
     
