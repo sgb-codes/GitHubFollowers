@@ -24,7 +24,6 @@ class SearchVC: UIViewController {
         configureUsernameTextField()
         configureCallToActionButton()
         createDismissKeyboardTapGesture()
-        
     }
     
     
@@ -54,7 +53,6 @@ class SearchVC: UIViewController {
         followerListVC.title    = usernameTextField.text
         
         navigationController?.pushViewController(followerListVC, animated: true)
-        
     }
     
     
