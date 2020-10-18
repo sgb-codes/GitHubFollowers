@@ -1,8 +1,8 @@
 //
-//  ErrorMessage.swift
+//  GFError.swift
 //  GitHubFollowers
 //
-//  Created by Simon Barrett on 17/10/2020.
+//  Created by Simon Barrett on 18/10/2020.
 //
 
 import Foundation
