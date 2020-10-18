@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A05F26C253BB480001EA2AB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A05F26B253BB480001EA2AB /* NetworkManager.swift */; };
 		2AD85580253B498600EB759B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8557F253B498600EB759B /* AppDelegate.swift */; };
 		2AD85582253B498600EB759B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD85581253B498600EB759B /* SceneDelegate.swift */; };
 		2AD85589253B498A00EB759B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AD85588253B498A00EB759B /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A05F26B253BB480001EA2AB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2AD8557C253B498600EB759B /* GitHubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AD8557F253B498600EB759B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AD85581253B498600EB759B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A05F26A253BB465001EA2AB /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2A05F26B253BB480001EA2AB /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		2AD85573253B498600EB759B = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +86,7 @@
 		2AD8557E253B498600EB759B /* GitHubFollowers */ = {
 			isa = PBXGroup;
 			children = (
+				2A05F26A253BB465001EA2AB /* Managers */,
 				2AD855BD253BAAEA00EB759B /* Model */,
 				2AD855BB253BA76D00EB759B /* Support */,
 				2AD855BA253BA71000EB759B /* Extensions */,
@@ -218,6 +229,7 @@
 				2AD855A9253B918F00EB759B /* GFTitleLabel.swift in Sources */,
 				2AD855A6253B83E900EB759B /* FollowerListVC.swift in Sources */,
 				2AD8559C253B556300EB759B /* FavoritesListVC.swift in Sources */,
+				2A05F26C253BB480001EA2AB /* NetworkManager.swift in Sources */,
 				2AD85582253B498600EB759B /* SceneDelegate.swift in Sources */,
 				2AD855B2253B9D6D00EB759B /* GFContainerView.swift in Sources */,
 			);
