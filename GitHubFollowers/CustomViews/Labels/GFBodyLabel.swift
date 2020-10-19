@@ -21,7 +21,7 @@ class GFBodyLabel: UILabel {
     }
     
     
-    init(textAlingment: NSTextAlignment) {
+    init(textAlignment: NSTextAlignment) {
         super.init(frame: .zero)
         
         self.textAlignment  = textAlignment
@@ -35,7 +35,6 @@ class GFBodyLabel: UILabel {
         adjustsFontSizeToFitWidth   = true
         minimumScaleFactor          = 0.75
         lineBreakMode               = .byWordWrapping
-        textAlignment               = .center
         
         translatesAutoresizingMaskIntoConstraints = false
     }

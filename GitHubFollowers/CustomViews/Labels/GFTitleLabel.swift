@@ -21,7 +21,7 @@ class GFTitleLabel: UILabel {
     }
     
     
-    init(textAlingment: NSTextAlignment, fontSize: CGFloat) {
+    init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
         super.init(frame: .zero)
         
         self.textAlignment  = textAlignment
@@ -35,7 +35,6 @@ class GFTitleLabel: UILabel {
         adjustsFontSizeToFitWidth   = true
         minimumScaleFactor          = 0.9
         lineBreakMode               = .byTruncatingTail
-        textAlignment               = .center
         translatesAutoresizingMaskIntoConstraints = false
     }
     

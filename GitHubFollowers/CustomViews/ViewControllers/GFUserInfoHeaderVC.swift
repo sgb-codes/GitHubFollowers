@@ -10,11 +10,11 @@ import UIKit
 class GFUserInfoHeaderVC: UIViewController {
     
     let avatarImageView     = GFAvatarImageView(frame: .zero)
-    let usernameLabel       = GFTitleLabel(textAlingment: .left, fontSize: 34)
+    let usernameLabel       = GFTitleLabel(textAlignment: .left, fontSize: 34)
     let nameLabel           = GFSecondaryTitleLabel(fontSize: 18)
     let locationImageView   = UIImageView()
     let locationLabel       = GFSecondaryTitleLabel(fontSize: 18)
-    let bioLabel            = GFBodyLabel(textAlingment: .left)
+    let bioLabel            = GFBodyLabel(textAlignment: .left)
     
     var user: User!
     
@@ -61,7 +61,8 @@ class GFUserInfoHeaderVC: UIViewController {
         bioLabel.text           = user.bio ?? "No bio available"
         bioLabel.numberOfLines  = 3
         
-        locationImageView.image = UIImage(systemName: SFSymbols.location)
+        locationImageView.image     = UIImage(systemName: SFSymbols.location)
+        locationImageView.tintColor = .secondaryLabel
         
     }
     
