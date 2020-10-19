@@ -9,10 +9,10 @@ import UIKit
 
 class GFAlertVC: UIViewController {
     
-    let containerView = GFContainerView()
-    let titleLabel = GFTitleLabel(textAlingment: .center, fontSize: 20)
-    let messageLabel = GFBodyLabel(textAlingment: .center)
-    let actionButton = GFButton(backgroundColor: .systemPink, title: "Ok")
+    let containerView   = GFContainerView()
+    let titleLabel      = GFTitleLabel(textAlingment: .center, fontSize: 20)
+    let messageLabel    = GFBodyLabel(textAlingment: .center)
+    let actionButton    = GFButton(backgroundColor: .systemPink, title: "Ok")
     
     var alertTitle: String?
     var message: String?
@@ -25,6 +25,8 @@ class GFAlertVC: UIViewController {
         self.alertTitle     = title
         self.message        = message
         self.buttonTitle    = buttonTitle
+        
+        configure()
     }
     
     required init?(coder: NSCoder) {
@@ -35,6 +37,11 @@ class GFAlertVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.75)
         
+        configure()
+    }
+    
+    
+    private func configure() {
         configureContainerView()
         configureTitleLabel()
         configureActionButton()
@@ -42,7 +49,7 @@ class GFAlertVC: UIViewController {
     }
     
     
-    func configureContainerView() {
+    private func configureContainerView() {
         view.addSubview(containerView)
         
         NSLayoutConstraint.activate([
@@ -54,7 +61,7 @@ class GFAlertVC: UIViewController {
     }
     
     
-    func configureTitleLabel() {
+    private func configureTitleLabel() {
         containerView.addSubview(titleLabel)
         titleLabel.text = alertTitle ?? "Something went wrong"
         
@@ -67,7 +74,7 @@ class GFAlertVC: UIViewController {
     }
     
     
-    func configureActionButton() {
+    private func configureActionButton() {
         containerView.addSubview(actionButton)
         actionButton.setTitle(buttonTitle ?? "Ok", for: .normal)
         actionButton.addTarget(self, action: #selector(dismissVC), for: .touchUpInside)
@@ -81,7 +88,7 @@ class GFAlertVC: UIViewController {
     }
     
     
-    func configureMessageLabel() {
+    private func configureMessageLabel() {
         containerView.addSubview(messageLabel)
         messageLabel.text           = message ?? "Unable to complete request"
         messageLabel.numberOfLines  = 4
