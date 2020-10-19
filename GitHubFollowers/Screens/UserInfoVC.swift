@@ -29,7 +29,7 @@ class UserInfoVC: UIViewController {
     }
     
     
-    func configure() {
+    private func configure() {
         configureViewController()
         configureHeaderView()
         configureItemViewOne()
@@ -55,14 +55,14 @@ class UserInfoVC: UIViewController {
     }
     
     
-    func configureViewController() {
+    private func configureViewController() {
         view.backgroundColor = .systemBackground
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem = doneButton
     }
     
     
-    func configureHeaderView() {
+    private func configureHeaderView() {
         view.addSubview(headerView)
         headerView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -75,7 +75,7 @@ class UserInfoVC: UIViewController {
     }
     
     
-    func configureItemViewOne() {
+    private func configureItemViewOne() {
         view.addSubview(itemViewOne)
         itemViewOne.translatesAutoresizingMaskIntoConstraints = false
         
@@ -88,7 +88,7 @@ class UserInfoVC: UIViewController {
     }
     
     
-    func configureItemViewTwo() {
+    private func configureItemViewTwo() {
         view.addSubview(itemViewTwo)
         itemViewTwo.translatesAutoresizingMaskIntoConstraints = false
         
@@ -101,7 +101,7 @@ class UserInfoVC: UIViewController {
     }
     
     
-    func add(childVC: UIViewController, to containerView: UIView) {
+    private func add(childVC: UIViewController, to containerView: UIView) {
         addChild(childVC)
         containerView.addSubview(childVC.view)
         childVC.view.frame = containerView.bounds
