@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2A05F26C253BB480001EA2AB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A05F26B253BB480001EA2AB /* NetworkManager.swift */; };
+		2A6C4B70253D11CD0053776D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6C4B6F253D11CD0053776D /* Constants.swift */; };
 		2ACAB6CB253CA4750074E28B /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACAB6CA253CA4740074E28B /* FollowerCell.swift */; };
 		2ACAB6D0253CA5750074E28B /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACAB6CF253CA5750074E28B /* GFAvatarImageView.swift */; };
 		2ACAB6D3253CC8F10074E28B /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ACAB6D2253CC8F10074E28B /* UIHelper.swift */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		2A05F26B253BB480001EA2AB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		2A6C4B6F253D11CD0053776D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2ACAB6CA253CA4740074E28B /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		2ACAB6CF253CA5750074E28B /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		2ACAB6D2253CC8F10074E28B /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				2ACAB6D2253CC8F10074E28B /* UIHelper.swift */,
 				2ACAB6E3253D00FA0074E28B /* GFError.swift */,
+				2A6C4B6F253D11CD0053776D /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				2A05F26C253BB480001EA2AB /* NetworkManager.swift in Sources */,
 				2AD85582253B498600EB759B /* SceneDelegate.swift in Sources */,
 				2AD855B2253B9D6D00EB759B /* GFContainerView.swift in Sources */,
+				2A6C4B70253D11CD0053776D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
