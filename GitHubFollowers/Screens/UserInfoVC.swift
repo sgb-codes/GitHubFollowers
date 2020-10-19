@@ -24,10 +24,20 @@ class UserInfoVC: UIViewController {
         itemViewOne.backgroundColor = .systemPink
         itemViewTwo.backgroundColor = .systemGreen
 
-        view.backgroundColor = .systemBackground
-        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
-        navigationItem.rightBarButtonItem = doneButton
         configure()
+        getUserInfo()
+    }
+    
+    
+    func configure() {
+        configureViewController()
+        configureHeaderView()
+        configureItemViewOne()
+        configureItemViewTwo()
+    }
+    
+    
+    func getUserInfo() {
         NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
             guard let self = self else { return }
             
@@ -40,18 +50,15 @@ class UserInfoVC: UIViewController {
 
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Something went wrong", message: error.rawValue, buttonTitle: "Ok")
-                
             }
         }
-        
-        configure()
     }
     
     
-    func configure() {
-        configureHeaderView()
-        configureItemViewOne()
-        configureItemViewTwo()
+    func configureViewController() {
+        view.backgroundColor = .systemBackground
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
+        navigationItem.rightBarButtonItem = doneButton
     }
     
     
@@ -92,6 +99,7 @@ class UserInfoVC: UIViewController {
             itemViewTwo.heightAnchor.constraint(equalToConstant: itemHeight)
         ])
     }
+    
     
     func add(childVC: UIViewController, to containerView: UIView) {
         addChild(childVC)
