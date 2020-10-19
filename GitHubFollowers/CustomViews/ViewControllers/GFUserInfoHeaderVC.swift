@@ -25,8 +25,6 @@ class GFUserInfoHeaderVC: UIViewController {
     init(user: User) {
         super.init(nibName: nil, bundle: nil)
         self.user = user
-        
-        configure()
     }
     
     
