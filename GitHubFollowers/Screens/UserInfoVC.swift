@@ -9,17 +9,25 @@ import UIKit
 
 class UserInfoVC: UIViewController {
     
-    let headerView = UIView()
+    let headerView  = UIView()
+    let itemViewOne = UIView()
+    let itemViewTwo = UIView()
     
     var username: String!
+    
+    let padding: CGFloat = 20
+    let itemHeight: CGFloat = 140
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        itemViewOne.backgroundColor = .systemPink
+        itemViewTwo.backgroundColor = .systemGreen
 
         view.backgroundColor = .systemBackground
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(dismissVC))
         navigationItem.rightBarButtonItem = doneButton
-        layoutUI()
+        configure()
         NetworkManager.shared.getUserInfo(for: username) { [weak self] result in
             guard let self = self else { return }
             
@@ -36,11 +44,18 @@ class UserInfoVC: UIViewController {
             }
         }
         
-        layoutUI()
+        configure()
     }
     
     
-    func layoutUI() {
+    func configure() {
+        configureHeaderView()
+        configureItemViewOne()
+        configureItemViewTwo()
+    }
+    
+    
+    func configureHeaderView() {
         view.addSubview(headerView)
         headerView.translatesAutoresizingMaskIntoConstraints = false
         
@@ -52,6 +67,31 @@ class UserInfoVC: UIViewController {
         ])
     }
     
+    
+    func configureItemViewOne() {
+        view.addSubview(itemViewOne)
+        itemViewOne.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
+            itemViewOne.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            itemViewOne.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            itemViewOne.heightAnchor.constraint(equalToConstant: itemHeight)
+        ])
+    }
+    
+    
+    func configureItemViewTwo() {
+        view.addSubview(itemViewTwo)
+        itemViewTwo.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            itemViewTwo.topAnchor.constraint(equalTo: itemViewOne.bottomAnchor, constant: padding),
+            itemViewTwo.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
+            itemViewTwo.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            itemViewTwo.heightAnchor.constraint(equalToConstant: itemHeight)
+        ])
+    }
     
     func add(childVC: UIViewController, to containerView: UIView) {
         addChild(childVC)
