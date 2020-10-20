@@ -15,15 +15,11 @@ class GFContainerView: UIView {
         configure()
     }
     
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init() {
-        super.init(frame: .zero)
-        
-        configure()
-    }
     
     private func configure() {
         backgroundColor       = .systemBackground
