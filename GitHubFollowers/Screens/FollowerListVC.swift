@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol FollowerListVCDelegate: class {
+    func didRequestFollowers(for username: String)
+}
+
 class FollowerListVC: UIViewController {
     
     enum Section {
@@ -16,7 +20,7 @@ class FollowerListVC: UIViewController {
     var username: String!
     var followers: [Follower]           = []
     var filteredFollowers: [Follower]   = []
-    var page: Int                       = 1
+    var page                            = 1
     var hasMoreFollowers                = true
     var isSearching                     = false
     
@@ -30,8 +34,6 @@ class FollowerListVC: UIViewController {
         configureSearchController()
         getFollowers(username: username, page: page)
         configureDataSource()
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -85,11 +87,10 @@ class FollowerListVC: UIViewController {
                     return
                 }
                 
-                self.updateData(on: followers)
+                self.updateData(on: self.followers)
                 
             case .failure(let error):
                 self.presentGFAlertOnMainThread(title: "Bad stuff Happened", message: error.rawValue, buttonTitle: "Ok")
-                return
             }
         }
     }
@@ -136,6 +137,7 @@ extension FollowerListVC: UICollectionViewDelegate {
         
         let destVC          = UserInfoVC()
         destVC.username     = follower.login
+        destVC.delegate     = self
         let navController   = UINavigationController(rootViewController: destVC)
         present(navController, animated: true)
     }
@@ -155,4 +157,19 @@ extension FollowerListVC: UISearchResultsUpdating, UISearchBarDelegate {
         isSearching         = false
         updateData(on: followers)
     }
+}
+
+extension FollowerListVC: FollowerListVCDelegate {
+    func didRequestFollowers(for username: String) {
+        self.username   = username
+        title           = username
+        page            = 1
+        followers.removeAll()
+        filteredFollowers.removeAll()
+        collectionView.setContentOffset(.zero, animated: true)
+
+        getFollowers(username: username, page: page)
+    }
+    
+    
 }

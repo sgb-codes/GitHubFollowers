@@ -17,9 +17,10 @@ class UserInfoVC: UIViewController {
     let headerView  = UIView()
     let itemViewOne = UIView()
     let itemViewTwo = UIView()
-    let dateLabel = GFBodyLabel(textAlignment: .center)
+    let dateLabel   = GFBodyLabel(textAlignment: .center)
     
     var username: String!
+    weak var delegate: FollowerListVCDelegate!
     
     let padding: CGFloat = 20
     let itemHeight: CGFloat = 140
@@ -153,11 +154,16 @@ extension UserInfoVC: UserInfoVCDelegate {
             presentGFAlertOnMainThread(title: "Invalid URL", message: "The url attached to this user is invalid.", buttonTitle: "Ok")
             return
         }
-        
         presentSafariVC(with: url)
     }
     
+    
     func didTapGetFollowers(for user: User) {
-        
+        guard user.followers != 0 else {
+            presentGFAlertOnMainThread(title: "No followers", message: "This user has no followers. Go follow them 😀", buttonTitle: "Ok")
+            return
+        }
+        delegate.didRequestFollowers(for: user.login)
+        dismissVC()
     }
 }
