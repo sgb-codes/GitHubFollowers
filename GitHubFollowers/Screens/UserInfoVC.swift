@@ -8,8 +8,7 @@
 import UIKit
 
 protocol UserInfoVCDelegate: class {
-    func didTapGitHubProfile(for user: User)
-    func didTapGetFollowers(for user: User)
+    func didRequestFollowers(for username: String)
 }
 
 class UserInfoVC: GFDataLoadingVC {
@@ -20,7 +19,7 @@ class UserInfoVC: GFDataLoadingVC {
     let dateLabel   = GFBodyLabel(textAlignment: .center)
     
     var username: String!
-    weak var delegate: FollowerListVCDelegate!
+    weak var delegate: UserInfoVCDelegate!
     
     let padding: CGFloat = 20
     let itemHeight: CGFloat = 140
@@ -147,7 +146,7 @@ class UserInfoVC: GFDataLoadingVC {
     }
 }
 
-extension UserInfoVC: UserInfoVCDelegate {
+extension UserInfoVC: ItemInfoVCDelegate {
     
     func didTapGitHubProfile(for user: User) {
         guard let url = URL(string: user.htmlUrl) else {
