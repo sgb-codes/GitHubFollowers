@@ -13,6 +13,10 @@ protocol UserInfoVCDelegate: class {
 
 class UserInfoVC: GFDataLoadingVC {
     
+    let scrollView  = UIScrollView()
+    let contentView = UIView()
+    
+    
     let headerView  = UIView()
     let itemViewOne = UIView()
     let itemViewTwo = UIView()
@@ -33,6 +37,7 @@ class UserInfoVC: GFDataLoadingVC {
     
     
     private func configure() {
+        configureScrollView()
         configureViewController()
         configureHeaderView()
         configureItemViewOne()
@@ -74,53 +79,66 @@ class UserInfoVC: GFDataLoadingVC {
     }
     
     
+    private func configureScrollView() {
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        scrollView.pinToEdges(of: view)
+        contentView.pinToEdges(of: scrollView)
+        
+        NSLayoutConstraint.activate([
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            contentView.heightAnchor.constraint(equalToConstant: 600)
+        ])
+    }
+    
+    
     private func configureHeaderView() {
-        view.addSubview(headerView)
+        contentView.addSubview(headerView)
         headerView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            headerView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            headerView.topAnchor.constraint(equalTo: contentView.safeAreaLayoutGuide.topAnchor),
+            headerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            headerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             headerView.heightAnchor.constraint(equalToConstant: 210)
         ])
     }
     
     
     private func configureItemViewOne() {
-        view.addSubview(itemViewOne)
+        contentView.addSubview(itemViewOne)
         itemViewOne.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             itemViewOne.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: padding),
-            itemViewOne.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-            itemViewOne.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            itemViewOne.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
+            itemViewOne.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
             itemViewOne.heightAnchor.constraint(equalToConstant: itemHeight)
         ])
     }
     
     
     private func configureItemViewTwo() {
-        view.addSubview(itemViewTwo)
+        contentView.addSubview(itemViewTwo)
         itemViewTwo.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             itemViewTwo.topAnchor.constraint(equalTo: itemViewOne.bottomAnchor, constant: padding),
-            itemViewTwo.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-            itemViewTwo.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            itemViewTwo.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
+            itemViewTwo.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
             itemViewTwo.heightAnchor.constraint(equalToConstant: itemHeight)
         ])
     }
     
     
     private func configureDateLabel() {
-        view.addSubview(dateLabel)
+        contentView.addSubview(dateLabel)
         dateLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             dateLabel.topAnchor.constraint(equalTo: itemViewTwo.bottomAnchor, constant: padding),
-            dateLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: padding),
-            dateLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -padding),
+            dateLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
+            dateLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
             dateLabel.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
