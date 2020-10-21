@@ -35,7 +35,6 @@ class GFUserInfoHeaderVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configure()
     }
     
@@ -52,24 +51,16 @@ class GFUserInfoHeaderVC: UIViewController {
     
     
     private func configureUIElements() {
-        downloadAvatarImage()
-        usernameLabel.text      = user.login
-        nameLabel.text          = user.name ?? ""
-        locationLabel.text      = user.location ?? "No Location"
-        bioLabel.text           = user.bio ?? "No bio available"
-        bioLabel.numberOfLines  = 3
+        avatarImageView.downloadImage(fromURL: user.avatarUrl)
         
-        locationImageView.image     = UIImage(systemName: SFSymbols.location)
+        usernameLabel.text          = user.login
+        nameLabel.text              = user.name ?? ""
+        locationLabel.text          = user.location ?? "No Location"
+        bioLabel.text               = user.bio ?? "No bio available"
+        bioLabel.numberOfLines      = 3
+        
+        locationImageView.image     = SFSymbols.location
         locationImageView.tintColor = .secondaryLabel
-        
-    }
-    
-    
-    func downloadAvatarImage() {
-        NetworkManager.shared.downloadImage(from: user.avatarUrl) { [weak self] image in
-            guard let self = self else { return }
-            DispatchQueue.main.async { self.avatarImageView.image = image }
-        }
     }
     
     
@@ -83,6 +74,7 @@ class GFUserInfoHeaderVC: UIViewController {
             avatarImageView.heightAnchor.constraint(equalToConstant: 90)
         ])
     }
+    
     
     private func configureUsernameLabel() {
         view.addSubview(usernameLabel)
@@ -106,6 +98,7 @@ class GFUserInfoHeaderVC: UIViewController {
             nameLabel.heightAnchor.constraint(equalToConstant: 20)
         ])
     }
+    
     
     private func configureLocationImageViewAndLabel() {
         view.addSubview(locationImageView)

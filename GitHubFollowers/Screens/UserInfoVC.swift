@@ -16,7 +16,6 @@ class UserInfoVC: GFDataLoadingVC {
     let scrollView  = UIScrollView()
     let contentView = UIView()
     
-    
     let headerView  = UIView()
     let itemViewOne = UIView()
     let itemViewTwo = UIView()
@@ -28,9 +27,9 @@ class UserInfoVC: GFDataLoadingVC {
     let padding: CGFloat = 20
     let itemHeight: CGFloat = 140
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configure()
         getUserInfo()
     }
@@ -152,9 +151,7 @@ class UserInfoVC: GFDataLoadingVC {
     }
     
     
-    @objc func dismissVC() {
-        dismiss(animated: true)
-    }
+    @objc func dismissVC() { dismiss(animated: true) }
 }
 
 

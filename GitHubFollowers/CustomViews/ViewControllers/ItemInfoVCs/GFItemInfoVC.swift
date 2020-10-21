@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class GFItemInfoVC: UIViewController {
     
     let stackView       = UIStackView()
@@ -16,6 +15,7 @@ class GFItemInfoVC: UIViewController {
     let actionButton    = GFButton()
     
     var user: User!
+    
     
     init(user: User) {
         super.init(nibName: nil, bundle: nil)
@@ -41,10 +41,12 @@ class GFItemInfoVC: UIViewController {
         configureActionButton()
     }
     
+    
     private func configureBackgroundView() {
         view.layer.cornerRadius = 18
         view.backgroundColor    = .secondarySystemBackground
     }
+    
     
     private func configureStackViewLayout() {
         stackView.axis          = .horizontal
@@ -60,9 +62,7 @@ class GFItemInfoVC: UIViewController {
     }
     
     
-    @objc func actionButtonTapped() {
-        
-    }
+    @objc func actionButtonTapped() {}
     
     
     private func configureStackViewUI() {

@@ -16,9 +16,9 @@ class FavoriteCell: UITableViewCell {
     
     let padding: CGFloat    = 12
     
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
         configure()
     }
     
@@ -26,12 +26,10 @@ class FavoriteCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     func set(favorite: Follower) {
         usernameLabel.text = favorite.login
-        NetworkManager.shared.downloadImage(from: favorite.avatarUrl) { [weak self] image in
-            guard let self = self else { return }
-            DispatchQueue.main.async { self.avatarImageView.image = image }
-        }
+        avatarImageView.downloadImage(fromURL: favorite.avatarUrl)
     }
     
     
